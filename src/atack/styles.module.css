@@ -1,0 +1,15 @@
+.sweep {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+.sweep > img {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-30deg);
+}
+
+.rot {
+  transform: rotate(-360deg);
+}

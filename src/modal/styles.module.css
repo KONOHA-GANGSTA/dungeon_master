@@ -1,0 +1,9 @@
+.win {
+  color: green;
+  text-shadow: 0 0 10px rgb(0, 169, 0);
+}
+
+.lose {
+  color: rgb(132, 0, 0);
+  text-shadow: 0 0 10px rgb(200, 0, 0);
+}
