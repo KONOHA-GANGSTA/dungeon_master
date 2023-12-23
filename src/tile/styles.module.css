@@ -2,6 +2,7 @@
   width: 25px;
   height: 25px;
   background-size: 100%;
+  z-index: 0;
 }
 
 .root > img {

@@ -1,5 +1,6 @@
 import { enemies } from "../../main";
 import { drawAttack } from "../atack/drawAttack";
+import { drawDamage } from "../atack/drawDamage";
 import { canGo } from "../characters/canGo";
 import { checkPickup } from "../characters/checkPickup";
 import { getEnemiesAround } from "../characters/getEnemiesAround";
@@ -29,6 +30,7 @@ export const initHero = () => {
     heal: function () {
       if (this.health == 5) return;
       this.health += 1;
+      drawDamage(-1, this);
       this.healthBar.style.width = `${(this.health / 5) * 100}%`;
     },
     boost: function () {
@@ -82,7 +84,7 @@ export const initHero = () => {
       this.checkIfPickUp();
     },
     attack: function () {
-      // drawAttack(this);
+      drawAttack(this);
       const enemiesPositions = getEnemiesAround(this);
       if (!enemiesPositions) return;
       const enemiesToAttack = enemiesPositions.map(({ x, y }) => {
@@ -107,6 +109,7 @@ export const initHero = () => {
     getDamage: function () {
       this.health -= 1;
       this.healthBar.style.width = `${(this.health / 5) * 100}%`;
+      drawDamage(1, this);
       if (this.health == 0) {
         this.body.remove();
         this.map[this.currentPosition.y][this.currentPosition.x] =

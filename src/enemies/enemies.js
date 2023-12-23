@@ -1,4 +1,5 @@
 import { hero } from "../../main";
+import { drawDamage } from "../atack/drawDamage";
 import { canGo } from "../characters/canGo";
 import { getAxisOfMovement } from "../characters/getAxisOfMovement";
 import { isHeroAround } from "../characters/isHeroAround";
@@ -30,6 +31,7 @@ export const initEnemies = () => {
 
       getDamage: function (dmg) {
         this.health -= dmg;
+        drawDamage(dmg, this);
         this.healthBar.style.width = `${(this.health / 5) * 100}%`;
         if (this.health <= 0) {
           body.remove();
