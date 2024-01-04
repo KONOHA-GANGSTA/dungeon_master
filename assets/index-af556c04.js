@@ -124,8 +124,8 @@ const r = {
     return s;
   },
   y = D(P);
-const U = "./assets/tile-HP-2a7da82c.png",
-  Y = "./assets/tile-SW-a6a7a0db.png",
+const U = "./dungeon_master/assets/tile-HP-2a7da82c.png",
+  Y = "./dungeon_master/assets/tile-SW-a6a7a0db.png",
   G = (e) => {
     const t = Array.from(document.querySelector(".field").childNodes);
     let o = 0;
@@ -149,8 +149,8 @@ const U = "./assets/tile-HP-2a7da82c.png",
         }
     }
   },
-  V = "./assets/tile-P-4e624d90.png",
-  W = "./assets/tile-E-44b718b0.png",
+  V = "./dungeon_master/assets/tile-P-4e624d90.png",
+  W = "./dungeon_master/assets/tile-E-44b718b0.png",
   X = "_character_19aqx_1",
   z = "_health_19aqx_31",
   F = "_enemy_19aqx_45",
@@ -222,7 +222,7 @@ const U = "./assets/tile-HP-2a7da82c.png",
     return o;
   },
   k = oe(y),
-  se = "./assets/sweep-52edf637.svg",
+  se = "./dungeon_master/assets/sweep-52edf637.svg",
   ne = "_sweep_lkju3_1",
   ie = "_rot_lkju3_29",
   re = "_box_lkju3_37",
